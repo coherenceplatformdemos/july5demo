@@ -30,9 +30,9 @@ DEBUG = (os.environ.get("COHERENCE_DEV", "").lower() == "true")
 ALLOWED_HOSTS = []
 
 if os.environ.get("COHERENCE_ENVIRONMENT_DOMAIN"):
-    ALLOWED_HOSTS.append(f"https://{os.environ.get('COHERENCE_ENVIRONMENT_DOMAIN')}")
+    ALLOWED_HOSTS.append(f"{os.environ.get('COHERENCE_ENVIRONMENT_DOMAIN')}")
 if os.environ.get("COHERENCE_CUSTOM_DOMAIN"):
-    ALLOWED_HOSTS.append(f"https://{os.environ.get('COHERENCE_CUSTOM_DOMAIN')}")
+    ALLOWED_HOSTS.append(f"{os.environ.get('COHERENCE_CUSTOM_DOMAIN')}")
 
 
 # Application definition
